@@ -1,8 +1,8 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
-import {auth} from "@/auth";
-import {signOut, signIn} from "next-auth/react";
+import {auth, signOut, signIn} from "@/auth";
+// import {signOut, signIn} from "next-auth/react";
 import {BadgePlus, LogOut} from "lucide-react";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 
