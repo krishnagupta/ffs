@@ -6,6 +6,7 @@ import Image from "next/image";
 import {Button} from "./ui/button";
 import {Author, Startup} from "@/sanity/types";
 import {Skeleton} from "./ui/skeleton";
+import {auth} from "@/auth";
 
 export type StartupTypeCard = Omit<Startup, "author"> & {author?: Author};
 
@@ -35,10 +36,7 @@ const StartupCard = ({post}: {post: StartupTypeCard}) => {
         </div>
         <Link href={`/user/${author?._id}`}>
           <Image
-            // src={author?.image!}
-            src={
-              "https://www.google.com/url?sa=i&url=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fimage&psig=AOvVaw0B6QzP1Ko7IXVuSb-O-xWx&ust=1739974851837000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCIiD-Mi1zYsDFQAAAAAdAAAAABAE"
-            }
+            src={author?.image!}
             alt={author?.name!}
             width={48}
             height={48}
